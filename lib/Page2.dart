@@ -1,8 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Page2 extends StatelessWidget {
-  const Page2({Key? key}) : super(key: key);
+  final String nama;
+  final String roles;
+  final String sekolah;
+  final String deskripsi;
+
+  const Page2({
+    Key? key,
+    required this.nama,
+    required this.roles,
+    required this.sekolah,
+    required this.deskripsi,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +40,7 @@ class Page2 extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Text(
-                'Raga Ridzki Panuntun',
+                '$nama',
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
@@ -39,7 +49,7 @@ class Page2 extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text(
-                'SMK Wikrama Bogor - Frontend Developer',
+                '$sekolah - $roles',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.grey.shade600,
@@ -57,7 +67,7 @@ class Page2 extends StatelessWidget {
                       color: Colors.black12,
                       blurRadius: 10,
                       offset: Offset(0, 5),
-                    )
+                    ),
                   ],
                 ),
                 child: ListTile(
@@ -70,7 +80,7 @@ class Page2 extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              // History Section (Moved Above Skills)
+              // History Section
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -80,7 +90,7 @@ class Page2 extends StatelessWidget {
                       color: Colors.black12,
                       blurRadius: 10,
                       offset: Offset(0, 5),
-                    )
+                    ),
                   ],
                 ),
                 child: ListTile(
@@ -103,7 +113,7 @@ class Page2 extends StatelessWidget {
                       color: Colors.black12,
                       blurRadius: 10,
                       offset: Offset(0, 5),
-                    )
+                    ),
                   ],
                 ),
                 child: ListTile(
